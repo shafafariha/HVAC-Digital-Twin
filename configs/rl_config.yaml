@@ -1,0 +1,26 @@
+# RL (DQN) Training Configuration
+
+# Agent hyperparameters
+learning_rate: 0.001
+gamma: 0.99  # Discount factor
+epsilon: 1.0  # Initial exploration rate
+epsilon_min: 0.01  # Minimum exploration rate
+epsilon_decay: 0.995  # Epsilon decay per step
+batch_size: 64
+buffer_size: 10000  # Replay buffer size
+target_update_freq: 100  # Frequency of target network updates
+
+# Q-network architecture
+hidden_dims: [128, 128, 64]
+
+# Reward weights
+w_comfort: 0.7  # Weight for comfort reward
+w_energy: 0.3   # Weight for energy reward
+target_temp: 25.0  # Target temperature (°C)
+tolerance: 2.0  # Temperature tolerance (±°C)
+
+# Training
+num_episodes: 1000
+max_steps_per_episode: 100
+
+

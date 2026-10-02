@@ -1,0 +1,21 @@
+# Vanilla NN Training Configuration (data loss only, no physics)
+
+# Model architecture (same as PINN)
+hidden_dims: [128, 128, 64]
+dropout: 0.1
+
+# Training hyperparameters
+num_epochs: 100
+batch_size: 64
+learning_rate: 0.001
+weight_decay: 0.00001
+train_split: 0.8
+
+# No physics constraint
+physics_lambda: 0.0
+
+# Time step (used only if you later add physics; ignored for vanilla)
+delta_t: 60.0
+
+# Data normalization
+normalize: true
